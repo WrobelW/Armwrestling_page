@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root {
+    --color: #3f0961;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #240341;
+    font-family: 'Open Sans', sans-serif;
+}
+
+*::selection {
+    background: var(--color);
+    color: #fff;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+.heading {
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 1rem;
+    color: #666;
+}
+
+.heading span {
+    color: var(--color);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #000000;
+    padding: 2rem 9%;
+    box-shadow: 0 .5rem rgba(0, 0, 0, .1);
+}
+
+header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+header .logo i {
+    padding-right: 0.5rem;
+    color: var(--color);
+}
+
+header .navbar a {
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: #ffffff;
+}
+
+header .navbar a:hover {
+    color: var(--color);
+}
+
+#menu-bar {
+    font-size: 3rem;
+    cursor: pointer;
+    color: #666;
+    border: .1rem solid #666;
+    border-radius: .3rem;
+    padding: .5rem 1.5rem;
+    display: none;
+}
+
+
+@media(max-width:991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 2rem;
+    }
+}
+
+@media(max-width:768px) {
+
+    #menu-bar {
+        display: initial;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #f7f7f7;
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    header .navbar a {
+        margin: 1.5rem;
+        padding: 1.5rem;
+        display: block;
+        border: .2rem solid rgba(0, 0, 0, .1);
+        border-left: .5rem solid var(--color);
+        background: #fff;
+    }
+
+}
+
+@media(max-width:450px) {
+
+    html {
+        font-size: 50%;
+    }
+}
+
+.content {
+    width: 100vh;
+    padding: 10px;
+    font-size: 3rem;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border-collapse: collapse;
+    border: 1px solid #000;
+    padding: 10px;
+}
+th {
+    background-color: #200987;
+    color: #fff;
+}
+td {
+    background-color: #741cda;
+    color: #ffffff;
+}
+@media (max-width: 768px) {
+    .content {
+        margin-top: 100px;
+    }
+    thead {
+        display: none;
+    }
+    .table,tbody,tr,td {
+        display: block;
+        width: 100%;
+    }
+    tr {
+        margin-bottom: 20px;
+    }
+    td::before{
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 30%;
+        text-align: left;
+        padding: 10px 0 10px 10px;
+        font-weight: bold;
+    }
+    td {
+        padding: 0;
+        font-size: 1.5rem;
+        padding-left: 30%;
+        position: relative;
+        background-color: #200987;
+        color: #fff;
+    }
+    td span {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background: #fff;
+        color: #000;
+    }
+}
+
