@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
 
 :root {
-    --color: #3f0961;
+    --color: #FFFDD0;
 }
 
 * {
@@ -18,13 +18,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #240341;
+    background-color: #000;
     font-family: 'Open Sans', sans-serif;
 }
 
 *::selection {
-    background: var(--color);
-    color: #fff;
+    background:var(--color);
+    color: #504C41;
 }
 
 html {
@@ -54,7 +54,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #000000;
+    background: var(--color);
     padding: 2rem 9%;
     box-shadow: 0 .5rem rgba(0, 0, 0, .1);
 }
@@ -62,22 +62,22 @@ header {
 header .logo {
     font-size: 2.5rem;
     font-weight: bolder;
-    color: #ffffff;
+    color: #000;
 }
 
-header .logo i {
-    padding-right: 0.5rem;
-    color: var(--color);
+header a {
+    color: #000;
 }
 
 header .navbar a {
     font-size: 2rem;
     margin-left: 2rem;
-    color: #ffffff;
+    color: #000;
+    font-weight: bolder;
 }
 
 header .navbar a:hover {
-    color: var(--color);
+    color: #9e9696;
 }
 
 #menu-bar {
@@ -155,11 +155,11 @@ th, td {
     padding: 10px;
 }
 th {
-    background-color: #200987;
+    background-color: #504C41;
     color: #fff;
 }
 td {
-    background-color: #741cda;
+    background-color: #302c22;
     color: #ffffff;
 }
 @media (max-width: 768px) {
@@ -190,15 +190,15 @@ td {
         font-size: 1.5rem;
         padding-left: 30%;
         position: relative;
-        background-color: #200987;
+        background-color: #504C41;
         color: #fff;
     }
     td span {
         display: block;
         width: 100%;
         padding: 10px;
-        background: #fff;
-        color: #000;
+        background: #302c22;
+        color: #fff;
     }
 }
 
